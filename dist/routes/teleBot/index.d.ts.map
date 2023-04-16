@@ -1,0 +1,1 @@
+{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../src/routes/teleBot/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,QAAQ,EAAE,MAAM,UAAU,CAAC;AACpC,OAAO,EAAE,WAAW,EAAE,MAAM,SAAS,CAAC;AAMtC,qBAAa,OAAO;IAGC,GAAG,EAAE,WAAW;IAFnC,QAAQ,EAAE,QAAQ,CAAC;gBAEA,GAAG,EAAE,WAAW;IAInC,OAAO;IAMP,OAAO,CAAC,OAAO,EAAE,MAAM,EAAE,IAAI,GAAE,MAAe;CAU/C"}

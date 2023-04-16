@@ -30,8 +30,8 @@ export class App {
   }
 
   listen() {
-    this.app.listen(process.env.PORT, () => {
-      console.log("Server run in port " + process.env.PORT);
+    this.app.listen(4000, () => {
+      console.log("Server run in port " + 4000);
     });
   }
 }
