@@ -15,9 +15,10 @@ export class App {
     this.init();
   }
 
-  middleware() {
+  async middleware() {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
+    await this.telebot.setWedHook();
   }
 
   routes() {

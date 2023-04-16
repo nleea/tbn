@@ -6,7 +6,7 @@ export class Telebot {
   tele_bot: TelegramBot;
 
   constructor(public app: Application) {
-    this.tele_bot = new TelegramBot(process.env.TELEGRAN_1!, { polling: true });
+    this.tele_bot = new TelegramBot("1803635980:AAGmKGF-cRYdZZ3YevPVtiCVfIxs-TXWMkk");
   }
 
   methods() {
@@ -15,5 +15,9 @@ export class Telebot {
       const resp = match![1];
       this.tele_bot.sendMessage(chatId, resp);
     });
+  }
+
+  async setWedHook(){
+    await this.tele_bot.setWebHook("https://146.190.216.254/bot1803635980:AAGmKGF-cRYdZZ3YevPVtiCVfIxs-TXWMkk");
   }
 }
