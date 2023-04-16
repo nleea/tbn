@@ -1,21 +1,19 @@
-import { Telegraf } from "telegraf";
+
 import { Application } from "express";
+import TelegramBot from "node-telegram-bot-api";
 
 export class Telebot {
-  tele_bot: Telegraf;
+  tele_bot: TelegramBot;
 
   constructor(public app: Application) {
-    this.tele_bot = new Telegraf(process.env.TELEGRAN_1!);
+    this.tele_bot = new TelegramBot(process.env.TELEGRAN_1!, { polling: true });
   }
 
   methods() {
-    this.tele_bot.command("list", async (ctx) => {
-      this.tele_bot.telegram.sendMessage(ctx.chat.id, "Test");
+    this.tele_bot.onText(/\/test(.+)/, (msg, match) => {
+      const chatId = msg.chat.id;
+      const resp = match![1];
+      this.tele_bot.sendMessage(chatId, resp);
     });
-  }
-
-  webhook(webhook: string, path: string = "/bot") {
-    this.app.use(this.tele_bot.webhookCallback(path));
-    this.tele_bot.telegram.setWebhook(webhook);
   }
 }

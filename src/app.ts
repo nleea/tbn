@@ -18,11 +18,11 @@ export class App {
   middleware() {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
-    this.telebot.webhook("");
   }
 
   routes() {
     this.app.use(indexRoute);
+    this.telebot.methods()
   }
 
   async init() {
