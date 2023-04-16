@@ -10,6 +10,7 @@ export class Telebot {
   }
 
   methods() {
+    console.log("entro")
     this.tele_bot.onText(/\/test(.+)/, (msg, match) => {
       const chatId = msg.chat.id;
       const resp = match![1];

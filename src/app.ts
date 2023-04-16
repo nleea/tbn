@@ -23,7 +23,7 @@ export class App {
 
   routes() {
     this.app.use(indexRoute);
-    this.telebot.methods()
+    this.telebot.methods();
   }
 
   async init() {

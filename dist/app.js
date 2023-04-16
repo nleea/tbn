@@ -28,7 +28,6 @@ class App {
     middleware() {
         this.app.use(express_1.default.json());
         this.app.use(express_1.default.urlencoded({ extended: true }));
-        this.telebot.webhook("https://146.190.216.254/");
     }
     routes() {
         this.app.use(routes_1.indexRoute);

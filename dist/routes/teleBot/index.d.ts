@@ -1,10 +1,9 @@
-import { Telegraf } from "telegraf";
 import { Application } from "express";
+import TelegramBot from "node-telegram-bot-api";
 export declare class Telebot {
     app: Application;
-    tele_bot: Telegraf;
+    tele_bot: TelegramBot;
     constructor(app: Application);
     methods(): void;
-    webhook(webhook: string, path?: string): void;
 }
 //# sourceMappingURL=index.d.ts.map
